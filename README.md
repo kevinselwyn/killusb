@@ -1,8 +1,8 @@
-#killusb
+# killusb
 
 Anti-forensic tool that triggers kill functionality when a USB device is added or removed
 
-##Installation
+## Installation
 
 ```
 make && sudo make install
@@ -28,7 +28,7 @@ Build with custom macros with:
 gcc -o killusb -DEVICES=256 -DELAY=1 -DLOG=\"/var/log/killusb.log\" killusb.c -lusb
 ```
 
-##Usage
+## Usage
 
 ```
  _    _ _ _           _
@@ -51,7 +51,7 @@ Options:
  -l, --log <path>            Log file path
 ```
 
-##Explanation
+## Explanation
 
 Run without any arguments, `killusb` will shutdown the computer. If passed a script with `-s`, it will execute that script instead.
 
@@ -59,6 +59,6 @@ This program follows more of a [Unix Philosophy](http://www.catb.org/esr/writing
 
 If the user wants to clear all RAM or erase files, this functionality must be put into a Bash script to be run by `killusb`
 
-##Acknowledgements
+## Acknowledgements
 
 Obvious ripoff of [hephaest0s](https://github.com/hephaest0s)'s [usbkill](https://github.com/hephaest0s/usbkill), with the obvious notable change of not being dependent on Python, but also being less portable. (Good luck building on OSX)
